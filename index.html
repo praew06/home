@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE Patcharida</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://nickzaahhaahha.github.io/HCI_work6/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <style>
+    .dropbtn {
+      background-color: #ffffff;
+      color: black;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    .dropdown:hover .dropbtn {background-color: #ffffff;}
+    </style>
+<!--
+เนื่องจากมีปัญหาการ load font ข้ามเครื่อง ผ่านแฟ้ม all.min.css
+จึงเพิ่มการกำหนด font-face และเรียกแฟ้มใน current folder
+- https://adminlte.io/themes/v3/plugins/fontawesome-free/css/all.min.css
+- https://www.farahimpex.com/vendor/jeroennoten/laravel-adminlte/resources/assets/vendor/font-awesome/webfonts/
+github.io
+- https://nickzaahhaahha.github.io/HCI_work6/
+- https://github.com/Nickzaahhaahha/HCI_work6
+- https://nickzaahhaahha.github.io/HCI_work6/fontawesome-free/css/all.min.css
+- http://thaiall.github.io/www/adminlte/adminlte_github.htm
+--> 
+ 
+</head>
+<body class="hold-transition sidebar-mini layout-fixed" style="font-family:kanit;">
+<div class="wrapper">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit" />
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <div class="dropdown">
+        <button class="dropbtn">Pyramid</button>
+        <div class="dropdown-content">
+          <a href="https://praew06.github.io/mycool/" class="nav-link">My Web</a>
+          <a href="https://github.com/praew06/java_pyramid" class="nav-link">Pyramid Java</a>
+          <a href="https://github.com/praew06/php_pyramid" class="nav-link">Pyramid Php</a>
+        </div>
+      </div>
+    </ul>
+      </li>
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <form action="https://thaiwebsearch.hypermart.net/cgi/srchweb.pl" class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" name="SearchText" value="hello"> 
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-1 pb-1 mb-1 d-flex">
+        <img src="https://raw.githubusercontent.com/praew06/home/main/21112cdd3988ea274e3cf3bc4d57202a.jpg" alt="" style="height:30px;">
+        <div class="info">
+          <a href="index.htm" class="d-block">Patcharida Jaruenpon</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+          <!-- li class="nav-item has-treeview menu-open" -->
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active">
+              <i class="fas fa-star"></i>
+              <p> Social Media
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://www.facebook.com/patcharida.jareonpon.3/" class="nav-link active">
+                  <i class="fab fa-facebook-square"></i>
+                  <p>Facebook</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.youtube.com/channel/UClXeMcZTjHUVfdHRHlgtdSQ?view_as=subscriber" class="nav-link">
+                  <i class="fab fa-youtube-square"></i>
+                  <p>Youtube</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.instagram.com/ppraewpatcha/" class="nav-link">
+                  <i class="fab fa-instagram"></i>
+                  <p>Instagram</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active">
+              <i class="fas fa-user"></i>
+              <p>
+                พัชริดา  เจริญผล
+                 <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://github.com/praew06" class="nav-link">
+                  <i class="fab fa-git-square"></i>
+                  <p>Mygithub</p>
+                </a>
+              </li>
+                                        
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active">
+              <i class="fas fa-user"></i>
+              <p>
+                Wordpress
+                 <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://p380618065.wordpress.com/blog/" class="nav-link">
+                  <i class="fab fa-git-square"></i>
+                  <p>คำสั่งพื้นฐานบนระบบ Ubuntu</p>
+                </a>
+              </li>                  
+            </ul>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="https://patchrida01.wordpress.com/?fbclid=IwAR2eBv268tdp_O8nFaWzd_Yx42VNFfmLxp27ffxFVs4cQQ7AOFGl3mOoLus" class="nav-link">
+                    <i class="fab fa-git-square"></i>
+                    <p>การติดตั้ง XAMPP 7</p>
+                  </a>
+                </li>                  
+              </ul>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="https://patchrida01.wordpress.com/blog/?fbclid=IwAR2Lq85tmAlZWK6KCLSc_17QAVOaGUUBF2TqjNUNEFoyKrcuyCUsT0jbLrU" class="nav-link">
+                    <i class="fab fa-git-square"></i>
+                    <p>การใช้ภาษา PHP และ MYSQL</p>
+                  </a>
+                </li>                  
+              </ul>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="https://p380618065.wordpress.com/2019/02/03/%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%95%e0%b8%b4%e0%b8%94%e0%b8%95%e0%b8%b1%e0%b9%89%e0%b8%87-android-%e0%b8%9a%e0%b8%99-virtualbox/" class="nav-link">
+                    <i class="fab fa-git-square"></i>
+                    <p>ติดตั้ง Android</p>
+                  </a>
+                </li>                  
+              </ul>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link active">
+                  <i class="fas fa-user"></i>
+                  <p>
+                    โครงงาน Project
+                     <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="https://p380618065.wordpress.com/2020/12/04/%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%a1%e0%b8%b2%e0%b9%81%e0%b8%a5%e0%b8%b0%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%aa%e0%b8%b3%e0%b8%84%e0%b8%b1%e0%b8%8d%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b9%82%e0%b8%84/" class="nav-link">
+                      <i class="fab fa-git-square"></i>
+                      <p>ที่มาและความสำคัญ</p>
+                    </a>
+                  </li>                            
+                </ul>
+              </li>
+              <ul class="nav nav-treeview">
+                <li class="nav-item has-treeview menu-close">
+                  <a href="#" class="nav-link">
+                    <i class="fas fa-at"></i>
+                    <p>
+                      แนวข้อสอบ
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="https://p380618065.wordpress.com/2020/12/04/%e0%b9%81%e0%b8%99%e0%b8%a7%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%97%e0%b8%b5%e0%b9%88-1-wordpress/" class="nav-link">
+                        <i class="fas fa-caret-right"></i>
+                        <p>ข้อที่1 WordpressDesign</p>
+                      </a>
+                    </li>                       
+                    <li class="nav-item">
+                      <a href="https://p380618065.wordpress.com/2020/12/04/%e0%b9%81%e0%b8%99%e0%b8%a7%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%97%e0%b8%b5%e0%b9%88-2-vscode-github/" class="nav-link">
+                        <i class="fas fa-caret-right"></i>
+                        <p>ข้อที่2 ใช้gitผ่านVscode&GitHub</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://p380618065.wordpress.com/2020/12/05/%e0%b9%81%e0%b8%99%e0%b8%a7%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%97%e0%b8%b5%e0%b9%88-3-css/" class="nav-link">
+                        <i class="fas fa-caret-right"></i>
+                        <p>ข้อที่3 การเขียนCSS</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://p380618065.wordpress.com/2020/12/05/%e0%b9%81%e0%b8%99%e0%b8%a7%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%97%e0%b8%b5%e0%b9%88-4-java-input-output/" class="nav-link">
+                        <i class="fas fa-caret-right"></i>
+                        <p>ข้อที่4 การสร้างเว็บเพจJAVA</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://p380618065.wordpress.com/2020/12/05/%e0%b9%81%e0%b8%99%e0%b8%a7%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%97%e0%b8%b5%e0%b9%88-5-mobile-app/" class="nav-link">
+                        <i class="fas fa-caret-right"></i>
+                        <p>ข้อที่5 การสร้างMobile App</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://p380618065.wordpress.com/2020/12/05/%e0%b9%81%e0%b8%99%e0%b8%a7%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%97%e0%b8%b5%e0%b9%88-6/" class="nav-link">
+                        <i class="fas fa-caret-right"></i>
+                        <p>ข้อที่6 SQL Select</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://p380618065.wordpress.com/2020/12/05/%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%97%e0%b8%b5%e0%b9%88-7-%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%88%e0%b8%b1%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3/" class="nav-link">
+                        <i class="fas fa-caret-right"></i>
+                        <p>ข้อที่7 Mysql ผ่านCli</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://p380618065.wordpress.com/2020/12/05/%e0%b9%81%e0%b8%99%e0%b8%a7%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%97%e0%b8%b5%e0%b9%88-8-%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%9a%e0%b8%88%e0%b8%b1/" class="nav-link">
+                        <i class="fas fa-caret-right"></i>
+                        <p>ข้อที่8 LOGIN+Adminlte 9146</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://p380618065.wordpress.com/2020/12/05/%e0%b9%81%e0%b8%99%e0%b8%a7%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%aa%e0%b8%ad%e0%b8%9a%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%97%e0%b8%b5%e0%b9%88-9-%e0%b8%ab%e0%b8%b2%e0%b8%88%e0%b8%b8%e0%b8%94%e0%b8%9c/?preview_id=175&preview_nonce=eba7e21c9b&preview=true" class="nav-link">
+                        <i class="fas fa-caret-right"></i>
+                        <p>ข้อที่9 หาจุดผิด</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>	
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+                <a href="https://praew06.github.io/cpsc471_joom/" class="nav-link active">
+                  <i class="fas fa-user"></i>
+                  <p>
+                    Joom
+                     <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link active">
+                <i class="fas fa-atom"></i>
+                <p>
+                  FreeHost
+                   <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="Patcha0016.infinityfreeapp.com" class="nav-link">
+                    <i class="fas fa-award"></i>
+                    <p>Epizy.Project</p>
+                  </a>
+                </li>                            
+              </ul>
+          </li>
+              <li class="nav-item has-treeview menu-close">
+                <a href="" class="nav-link active">
+                  <i class="fas fa-thumbs-up"></i>
+                  <p>
+                   วิชาที่สนใจ
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item has-treeview menu-close">
+                    <a href="https://fulkkie24.github.io/HOME/" class="nav-link">
+                      <i class="far fa-calendar-alt"></i>
+                      <p>
+                        TECH100
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="https://www.youtube.com/watch?v=SQA7tr4PtLg&feature=youtu.be" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>Assignment #2</p>
+                        </a>
+                      </li>                       
+                      <li class="nav-item">
+                        <a href="https://praew116.blogspot.com/" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>Assignment #3</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="https://preawwpchrd.blogspot.com/?fbclid=IwAR0ENDXaApcdZccBY0bSTCvIq_z8eKU1TUzQfUIoaydz06v2SoLuY0geGZ4" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>Assignment #7 </p>
+                        </a>
+                      </li>      
+                    </ul>
+                  </li>	
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item has-treeview menu-close">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-calendar-alt"></i>
+                      <p>
+                        CPSC231_611
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="https://www.youtube.com/watch?v=03mfZ_xBMpk&feature=share&fbclid=IwAR3ErXfK1XKVD9azON0YuGIBkJ5SVmp3yJrrX7UkujmOVWxK9H5zS6XztlE" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>วิดีโอารส่งเสริมศิลปะ ประเพณี</p>
+                        </a>
+                      </li>                       
+                      <li class="nav-item">
+                        <a href="https://github.com/praew06/Graph/blob/master/graph.pdf" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>Graph</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="https://praew06.github.io/1-10-Program/?fbclid=IwAR2SrXie0FAftEsroCPNoAz4kBlDyG6a6DxztQAHOk3gfqclvVaKNKN0hkE" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>งานที่ 10 พิมพ์ 1 - 10</p>
+                        </a>
+                      </li>      
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item has-treeview menu-close">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-calendar-alt"></i>
+                      <p>
+                        CPSC331_621
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="https://github.com/praew06/final_php/blob/master/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99php.pdf?fbclid=IwAR0ENDXaApcdZccBY0bSTCvIq_z8eKU1TUzQfUIoaydz06v2SoLuY0geGZ4" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>Final Project</p>
+                        </a>
+                      </li>                       
+                      <li class="nav-item">
+                        <a href="https://praew06.github.io/web_cpsc331_6/?fbclid=IwAR3ErXfK1XKVD9azON0YuGIBkJ5SVmp3yJrrX7UkujmOVWxK9H5zS6XztlE" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>36 pyramid</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="https://praew06.github.io/web_cpsc331_6/?fbclid=IwAR2eSt6kgFQ-aSzCkBme65cBgH5qKFis-4VyClmPzkxh6F-4xJxoM4vlVj0" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>Mysql_update 5&7</p>
+                        </a>
+                      </li>      
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item has-treeview menu-close">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-calendar-alt"></i>
+                      <p>
+                        CPSC321_CPSC332_621
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="https://github.com/praew06/work12_cpsc321/blob/master/%E0%B8%AA%E0%B8%A3%E0%B8%B8%E0%B8%9B%E0%B8%A7%E0%B8%B4%E0%B8%88%E0%B8%B1%E0%B8%A2.pdf?fbclid=IwAR0UoiWMp_NpWBjAhvQHDiEaOtUN-0ACKQSsl5s869hHwpV5WYqUqAuXA38" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>สรุปวิจัย</p>
+                        </a>
+                      </li>                       
+                      <li class="nav-item">
+                        <a href="https://github.com/praew06/cpsc321_work_9?fbclid=IwAR2uduxm0aDBAxk9jukXfnbxv4_reHnqqQooIhYUFGkCQ0M5-QZp-M_va9s" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>ติดตั้ง Atom</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="https://github.com/praew06/Work6_321/blob/master/60-Praew-hci.docx?fbclid=IwAR3a4zipJn0WCbAl-tOuPWtUHuOR4a2y0sYuhBaxqqqyvda2zCkSH_CoN4w" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>แบบสอบถาม วิจัย</p>
+                        </a>
+                      </li>      
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item has-treeview menu-close">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-calendar-alt"></i>
+                      <p>
+                        CPSC331_621
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="https://github.com/praew06/8_Nortwind/blob/master/products%20(1).sql?fbclid=IwAR3ErXfK1XKVD9azON0YuGIBkJ5SVmp3yJrrX7UkujmOVWxK9H5zS6XztlE" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>ปรับปรุงข้อมูล mysql_update.php</p>
+                        </a>
+                      </li>                       
+                      <li class="nav-item">
+                        <a href="https://praew06.github.io/web_cpsc331_6/?fbclid=IwAR3Yp8H2qaQl6KaJSUUa5nITe-EdaS1_bLVoV3UEiQTC1RtPFirKJ-LRE3E" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>64 โปรแกรม</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="https://github.com/praew06/work3_331/blob/master/products.sql?fbclid=IwAR2wN2_4RS2KVnsA0FNb6jUKBGP_dDLExd7ynFUTZzc-OAIOE-dWbihaplg" class="nav-link">
+                          <i class="fas fa-thumbtack"></i>
+                          <p>SQL NorthWind </p>
+                        </a>
+                      </li>      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>      
+      
+		
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">  
+    <!-- Main content -->
+    <section class="content">
+	
+
+<div class="attachment-block clearfix">
+<div class="attachment-pushed">
+<h4 class="attachment-heading"><a href="https://upload.facebook.com/AppCreateUniversity/">โปรเจ็คของฉัน</a></h4>
+<div class="attachment-text">
+  <iframe src="https://praew06.github.io/mycool/" width="1000" height="1100" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+<hr>
+<h4 class="attachment-heading"><a href="https://upload.facebook.com/AppCreateUniversity/">มหาลัยของฉัน</a></h4>
+<div class="attachment-text">
+  <iframe src="https://nation.ac.th/index.php/th/" height="600" width="800" frameborder="0"></iframe>
+<p>
+<span class="bigcap">ความเป็นมา</span><b>มหาวิทยาลัยเนชั่น เดิมมีชื่อเรียกว่า “วิทยาลัยโยนก” ได้รับอนุมัติจากทบวงมหาวิทยาลัยให้เปิดการเรียนการสอนตั้งแต่ปี พ.ศ. 2531 ดำเนินการโดยมูลนิธิโยนก วิทยาลัยโยนกได้รับอนุญาตจากสำนักงานคณะกรรมการการอุดมศึกษาให้เปลี่ยนประเภทจากวิทยาลัยเป็น “มหาวิทยาลัยโยนก” เมื่อวันที่ 23 สิงหาคม 2549 และต่อมาเมื่อวันที่ 30 พฤศจิกายน พ.ศ. 2554 กระทรวงศึกษาธิการโดยคำแนะนำของคณะกรรมการการอุดมศึกษาอนุญาตให้เปลี่ยนชื่อเป็น “มหาวิทยาลัยเนชั่น” มหาวิทยาลัยเปิดการเรียนการสอนในระดับปริญญาตรี และระดับปริญญาโท โดยเปิดสอนมาจนถึงปัจจุบันรวม 32 ปี (พ.ศ. 2531 – 2563) มีผู้สำเร็จการศึกษาแล้วมากกว่า 8,444 คน แบ่งเป็นระดับปริญญาตรี 6,907 คนและระดับปริญญาโท 1,537 คน
+
+  มหาวิทยาลัยเนชั่นเป็นสถาบันอุดมศึกษาเอกชนของจังหวัดลำปางที่มุ่งผลิตบัณฑิตที่มีคุณภาพให้แก่สังคมด้วยกระบวนการเรียนการสอนที่มุ่งเน้นให้นิสิตเป็นนักคิด ใฝ่เรียนรู้ ทั้งในด้านวิชาการ การประยุกต์ใช้ และมีคุณธรรม จิตสำนึกต่อสาธารณะ โดยมีกิจกรรมเพื่อฝึกฝนให้นิสิตมีประสบการณ์จริงสามารถนำความรู้ไปใช้ในการปฏิบัติหน้าที่การงานได้อย่างมีประสิทธิภาพ
+  
+  มหาวิทยาลัยมีภูมิทัศน์ที่สวยงามตามธรรมชาติ บรรยากาศการเรียนการสอนที่เอื้อต่อการเรียนรู้และการใช้ชีวิตในมหาวิทยาลัยเป็น “อุทยานการศึกษา” มีการจัดการเรียนการสอนที่นิสิตมีความใกล้ชิดกับคณาจารย์ อีกทั้งยังมีสิ่งอำนวยความสะดวกด้านต่าง ๆ อาทิ ห้องสมุด หอพักนิสิตชาย หอพักนิสิตหญิง ห้องปฏิบัติการคอมพิวเตอร์ ห้องปฏิบัติการเทคโนโลยีการสื่อสาร (ฝึกปฏิบัติการถ่ายทอดโทรทัศน์ วิทยุกระจายเสียง) มหาวิทยาลัย ตั้งอยู่ ณ เลขที่ 444 ถนนวชิราวุธดำเนิน ตำบลพระบาท อำเภอเมือง จังหวัดลำปาง
+</p>
+</div>
+</div>
+</div>  
+	  
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.0.4
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="https://adminlte.io/themes/v3/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://adminlte.io/themes/v3/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="https://adminlte.io/themes/v3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="https://adminlte.io/themes/v3/plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="https://adminlte.io/themes/v3/plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="https://adminlte.io/themes/v3/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="https://adminlte.io/themes/v3/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="https://adminlte.io/themes/v3/plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="https://adminlte.io/themes/v3/plugins/moment/moment.min.js"></script>
+<script src="https://adminlte.io/themes/v3/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="https://adminlte.io/themes/v3/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="https://adminlte.io/themes/v3/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="https://adminlte.io/themes/v3/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="https://adminlte.io/themes/v3/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="https://www.masterhook.net/public/assets/dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="https://adminlte.io/themes/v3/dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="https://adminlte.io/themes/v3/dist/js/demo.js"></script>
+</body>
+</html>
